@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/Estilos.css">
+	<link rel="stylesheet" href="css/semantic.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/semantic.js"></script>
+
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  
+    <div class="ui container"> 
+
+        <br><br>
+
+        <div class="ui breadcrumb" style="margin-left: -70%">
+
+            <a href="Entrada.html" target="principal" class="section"><font style="vertical-align: inherit; color: #000;"><font style="vertical-align: inherit;">Solicitudes</font></font></a>
+            <div class="divider"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">/</font></font></div>
+
+            <a href="permisos.html" target="principal" class="section"><font style="vertical-align: inherit; color: #000;"><font style="vertical-align: inherit;">Permisos</font></font></a>
+            <div class="divider"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">/</font></font></div>
+
+            <div class="active section"><font style="vertical-align: inherit;"><font style="vertical-align: inherit; color: rgb(36, 173, 173);;">Realizar solicitud</font></font></div>
+
+          </div>
+
+          <br><br>
+
+          <div>
+            <button style="cursor: default" class="ui teal button">Permisos</button>
+        </div>
+    
+        <h5>Realizar solicitud</h5>
+
+    </div>
+
+    <br><br>
+
+
+    <div class="ui container">
+        <div class="ui form">
+
+           <!--  Tipo y motivo del permiso -->
+
+          <div class="three fields">
+            <div class="field">
+              <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tipo de permiso</font></font></label>
+              <select name="motivoprefix" id="motivoprefix" onchange="showInp()">
+                <option value="prefix">Seleccione una opción</option>
+                <option value="medico">Médico</option>
+                <option value="obligacionespersonales">Obligaciones personales</option>
+                <option value="obligacionespublicas">obligaciones públicas</option> 
+              </select>
+            </div>
+
+          <div class="field">
+            <label for="" id="label"  style="display: none" onchange="showInp()">Motivo del permiso</label>
+            <select name="selecMedico" id="selecMedico" onchange="showInp(), showInp1()" style="display: none" placeholder="Motivo del permiso">
+                <option value="prefix">Cita médica </option>
+                <option value="medico">Cita odontológica</option>
+                <option value="obligacionespersonales">Procedimiento quirúrjico</option>
+                <option value="obligacionespublicas">Examen médico</option> 
+                <option value="otro" onchange="showInp1()">Otro</option>
+            </select>
+            <select name="selecOper" id="selecOper" onchange="showInp(), showInp2()" style="display: none" placeholder="Motivo del permiso">
+                <option value="prefix">Celebración familiar</option>
+                <option value="medico">Clase</option>
+                <option value="obligacionespersonales">Cuidado a persona enferma</option>
+                <option value="obligacionespublicas">Calamidad doméstica</option> 
+                <option value="otro" onchange="showInp2()">Otro</option>
+            </select>
+            <select name="selecOpub" id="selecOpub" onchange="showInp(), showInp3()" style="display: none" placeholder="Motivo del permiso">
+                <option value="prefix">Participación electoral</option>
+                <option value="medico">Obligaciones</option>
+                <option value="obligacionespersonales">Obligaciones personales</option>
+                <option value="obligacionespublicas">obligaciones públicas</option> 
+                <option value="otro" onchange="showInp3()">Otro</option>
+              </select>
+          </div>
+
+          <div class="field" >
+            <label for="" onchange="showInp1(), showInp2(), showInp3()" style="display: none" id="label1">¿Cuál?</label>
+            <input type="text" id="otrot" name= "otrot" placeholder="Especifíca" style="display: none" onchange="showInp1(), showInp2(), showInp3()">
+          </div> 
+       
+          </div>
+
+          <br>
+             <!--  Fecha -->
+
+          <div class="three fields">
+            <div class="field">
+              <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Día(s) requeridos</font></font></label>
+              <select name="diasRequeridos" id="diasRequeridos" onchange="showInp4()">
+                <option value="seleccione">Seleccione una opción</option>
+                <option value="unDia">Un solo día</option>
+                <option value="diasConsecutivos">Días consecutivos</option>
+                <option value="diasNoConsecutivos">Días no consecutivos</option> 
+              </select>
+            </div>
+
+            <div class="field">
+              <div id="UnDiaInsertar"  style="display: flex" onchange="showInp4()"> <!--Cambiar a display: none"-->
+                <div class="three fields"> 
+                  <div class="field">
+                    <label for="">Fecha</label>
+                    <input type="date" name="" id="">
+                  </div>
+                  <div class="field">
+                    <label for="">Desde</label>
+                    <input type="time" name="desde" id=""> 
+                  </div>
+                  <div class="field">
+                    <label for="">Hasta</label>
+                    <input type="time" name="hasta" id="">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+          <div class="two fields">
+            <div class="field">
+              <label for="">Archivos adjuntos</label> <br>
+              <p>A continuación adjunte los archivos que sustenta el permiso solicitado.</p>
+              <input type="file" name="" id="">
+            </div>
+
+            <div class="field">
+              <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Observaciones</font></font></label> <br>
+              <textarea rows="2" style="height: 89px;"></textarea>
+            </div>
+          </div>
+
+        </div>
+
+        <br>
+          
+        <button class="ui grey circular button">
+          <i class="paper plane icon"></i>
+          Enviar
+        </button>
+
+
+      
+        </button> 
+
+
+           
+
+
+              
+            
+
+
+    </div>
+
+   
+
+
+
+    </div>
+
+
+    <script>
+     
+      $('select.dropdown')
+  .dropdown()
+;
+
+function showInp(){
+  getSelectValue = document.getElementById("motivoprefix").value;
+
+  document.getElementById("label").style.display = "none";
+  
+
+  if (getSelectValue=="medico"){
+    document.getElementById("label").style.display = "inline-block";
+    document.getElementById("selecMedico").style.display = "inline-block";
+    document.getElementById("selecOper").style.display = "none";
+    document.getElementById("selecOpub").style.display = "none";
+  }else if(getSelectValue=="obligacionespersonales"){
+    document.getElementById("label").style.display = "inline-block";
+    document.getElementById("selecMedico").style.display = "none";
+    document.getElementById("selecOper").style.display = "inline-block";
+    document.getElementById("selecOpub").style.display = "none";
+  }else if(getSelectValue=="obligacionespublicas"){
+    document.getElementById("label").style.display = "inline-block";
+    document.getElementById("selecMedico").style.display = "none";
+    document.getElementById("selecOper").style.display = "none";
+    document.getElementById("selecOpub").style.display = "inline-block";
+  }
+}
+
+
+function showInp1(){
+  var getSelectValue = document.getElementById("selecMedico").value;
+  
+  switch (getSelectValue) {
+    case "otro": 
+      document.getElementById("label1").style.display = "inline-block";
+      document.getElementById("otrot").style.display = "inline-block";
+      document.getElementById("otrot").setAttribute("required", "required");
+      break;   
+}
+}
+
+function showInp2(){
+  var getSelectValue = document.getElementById("selecOper").value;
+  
+  switch (getSelectValue) {
+    case "otro": 
+      document.getElementById("label1").style.display = "inline-block";
+      document.getElementById("otrot").style.display = "inline-block";
+      document.getElementById("otrot").setAttribute("required", "required");
+      break;   
+}
+}
+
+function showInp3(){
+  var getSelectValue = document.getElementById("selecOpub").value;
+  
+  switch (getSelectValue) {
+    case "otro": 
+      document.getElementById("label1").style.display = "inline-block";
+      document.getElementById("otrot").style.display = "inline-block";
+      document.getElementById("otrot").setAttribute("required", "required");
+      break;   
+}
+}
+
+function showInp4(){
+  var getSelectValue = document.getElementById("diasRequeridos").value;
+  
+  switch (getSelectValue) {
+    case "unDia": 
+      document.getElementById("unDiaInsertar").style.display = "inline-block";
+      document.getElementById("unDiaInsertar").setAttribute("required", "required");
+      break;   
+}
+}
+
+    </script>
+</body>
+</html>

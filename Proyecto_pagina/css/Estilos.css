@@ -1,0 +1,367 @@
+body {margin:0; padding:0;text-align:center;background: #DBEBF6;}    
+ 
+#content {text-align:left;margin:auto; width:100%; height:100%;} 
+
+#cabecera {width:100%;height:10%;background-color:rgb(253, 253, 253);} 
+
+#menu {width:30%;  height: 84%; float:left;} 
+
+#contenido {width:70%;height: 84%;float:left;} 
+
+#pie {width:100%;height:5%;} 
+
+
+
+
+  
+  .boton1 {
+  background-color: #ffffff;
+  border-style: solid;
+  border-color: rgb(55, 197, 197);
+  margin-left: 3%;
+  border-radius: 20%;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 0%;
+  margin-top: 0%;
+  cursor:pointer;
+  }
+  
+  
+  .boton2 {
+    background-color: #ffffff;
+    border-style: solid;
+    border-color: rgb(230, 204, 122);
+    margin-left: 3%;
+    border-radius: 20%;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 0%;
+    margin-top: 0%;
+    cursor: pointer;
+    }
+  
+    
+  .boton3 {
+    background-color: #ffffff;
+    border-style: solid;
+    border-color: rgb(233, 107, 128);
+    margin-left: 3%;
+    border-radius: 20%;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 0%;
+    margin-top: 0%;
+    cursor: pointer;
+    }
+  
+    .boton4 {
+        background-color: rgb(158, 221, 221);
+        border-style: solid;
+        border-color: rgb(55, 197, 197);
+        margin-left: 3%;
+        border-radius: 20%;
+        width: 100px;
+        height: 100px;
+        margin-bottom: 0%;
+        margin-top: 0%;
+        cursor: pointer;
+        }
+
+  
+  .titulosmenu{
+    font-size: 11px;
+  }
+
+ 
+#link1 {
+    text-decoration: none;
+    
+  }
+  
+  .link1 :hover {
+    background-color: rgb(158, 221, 221);
+    transform: scale(103%);
+  }
+  
+  
+  .link2 {
+    text-decoration: none;
+    
+  }
+  
+  .link2 :hover {
+    background-color: rgb(243, 230, 186);
+    transform: scale(103%);
+  }
+  
+  
+  .link3 {
+    text-decoration: none;
+    
+  }
+  
+  .link3 :hover {
+    background-color: rgb(211, 163, 171);
+    transform: scale(103%);
+  }
+
+  #link4 {
+    text-decoration: none;
+    
+  }
+  
+  .link4 :hover {
+    transform: scale(103%);
+  }
+  
+
+#izquierda {
+    display:flex ;
+}
+
+#espacio {
+    margin-bottom: 20px;
+}
+
+
+.logo {
+  padding-left: 35px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  }
+
+  
+.boton_de_ayuda {
+  margin-left: 375px;
+  padding-top: 18px; 
+}
+
+
+h1 {  
+  margin-left: 30px;
+  padding-top: 15px;
+}
+
+h2 {  
+  margin-left: 145px;
+  padding-top: 20px;
+  color: rgb(30, 196, 247); 
+}
+
+/*
+.margenesFormulario {
+  margin-left: 40px;
+  margin-right: 80px;
+  margin-top: 2px;
+  margin-bottom: 5%;
+}
+*/
+
+@media (max-widht: 1140px){
+   
+}
+
+.todo_el_contenedor {
+  margin-bottom: 5%;
+}
+
+.link7 {
+  text-decoration: none;
+  
+}
+
+.link7 :hover {
+  transform: scale(103%);
+}
+
+.boton5 {
+  background-color: rgb(112, 207, 207);
+  border-style: solid;
+  border-color: rgb(112, 207, 207);
+  margin-left: 3%;
+  margin-right:3%;
+  border-radius: 20%;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 0%;
+  margin-top: 0%;
+  cursor: pointer;
+  } 
+  
+.boton6 {
+  background-color: rgb(230, 204, 122);
+  border-style: solid;
+  border-color: rgb(230, 204, 122);
+  margin-left: 3%;
+  margin-right:3%;
+  border-radius: 30%;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 0%;
+  margin-top: 0%;
+  cursor: pointer;
+  }
+
+/* Formulario de registro */
+
+  ::placeholder {
+    color: #c0c0c0; /* Reemplaza el color por el que desees */
+    font-size: 13.5px;
+  }
+
+  .formulario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .cuatro {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px
+  }
+
+  .formulario__label {
+    display: block;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 6px;
+    cursor: pointer;
+  }
+  
+  .formulario__grupo-input {
+    position: relative;
+  }
+  
+  .formulario__input {
+    width: 100%;
+    background: #fff;
+    border: 1px solid;
+    border-color: rgb(202, 202, 202);
+    border-radius: 3px;
+    height: 35px;
+    line-height: 40px;
+    padding: 0 40px 0 10px;
+    transition: .3s ease all;
+  }
+  
+  .formulario__input:focus {
+    border: 3px solid #0075FF;
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
+  }
+  
+  .formulario__input-error {
+    font-size: 12px;
+    margin-bottom: 0;
+    display: none;
+  }
+  
+  .formulario__input-error-activo {
+    display: block;
+  }
+  
+  .formulario__validacion-estado {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    z-index: 100;
+    font-size: 16px;
+    opacity: 0;
+  }
+  
+  .formulario__checkbox {
+    margin-right: 10px;
+  }
+  
+  .formulario__grupo-terminos, 
+  .formulario__mensaje,
+  .formulario__grupo-btn-enviar {
+    grid-column: span 2;
+  }
+  
+  .formulario__mensaje {
+    height: 25px;
+    line-height: 10px;
+    background:#edd3d3;
+    border: 2px solid;
+    border-color: #c27e7e;
+    padding: 0 15px;
+    border-radius: 5px;
+    display: none;
+    font: 1em sans-serif;
+    font-size: small;
+  }
+  
+  .formulario__mensaje-activo {
+    display: block;
+  }
+  
+  .formulario__mensaje p {
+    margin: 2px;
+  }
+  
+  .formulario__grupo-btn-enviar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .formulario__btn {
+    height: 45px;
+    line-height: 45px;
+    width: 30%;
+    background: #000;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .1s ease all;
+  }
+  
+  .formulario__btn:hover {
+    box-shadow: 3px 0px 30px rgba(163,163,163, 1);
+  }
+   
+  .formulario__mensaje-exito-activo {
+    display: block;
+  }
+  
+  /* ----- -----  Estilos para Validacion ----- ----- */
+  .formulario__grupo-correcto .formulario__validacion-estado {
+    color: #91db98;
+    opacity: 1;
+  }
+  
+  .formulario__grupo-incorrecto .formulario__label {
+    color: #df8c8c;
+  }
+  
+  .formulario__grupo-incorrecto .formulario__validacion-estado {
+    color: #db9595;
+    opacity: 1;
+  }
+  
+  .formulario__grupo-incorrecto .formulario__input {
+    border: 3px solid #c27e7e;
+  }
+  
+  
+  /* ----- -----  Mediaqueries ----- ----- */
+  @media screen and (max-width: 800px) {
+    .formulario {
+      grid-template-columns: 1fr;
+    }
+  
+    .formulario__grupo-terminos, 
+    .formulario__mensaje,
+    .formulario__grupo-btn-enviar {
+      grid-column: 1;
+    }
+  
+    .formulario__btn {
+      width: 100%;
+    }
+  }
